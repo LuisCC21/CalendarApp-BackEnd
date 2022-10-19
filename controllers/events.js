@@ -23,12 +23,13 @@ const crearEvento= async(req,res=express.response)=>{
     
 
     const evento = new Evento(req.body);
-
+    console.log(evento)
 
     try {
         evento.user=req.uid;
 
         const eventoGuardado=await evento.save()
+        console.log(eventoGuardado)
 
         res.status(201).json({
             ok:true,
