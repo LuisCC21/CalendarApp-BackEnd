@@ -23,9 +23,9 @@ app.use(express.json()); // todo lo que pase en formato json, pasara por aqui
 app.use('/api/auth',require('./routes/auth'));
 app.use('/api/events',require('./routes/events'));
 
-/* app.get('*',(req,res)=>{ //clase 429
+app.get('*',(req,res)=>{ //clase 429
     res.sendFile(__dirname+'/public/index.html');
-}) */
+})
 
 
 
